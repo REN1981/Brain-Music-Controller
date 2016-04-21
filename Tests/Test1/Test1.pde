@@ -1,5 +1,7 @@
 Pointer pointer;
 
+int miVariable = 100;
+
 void setup ()
 {
   size (640, 480);
