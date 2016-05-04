@@ -3,6 +3,8 @@ import netP5.*;
 import de.voidplus.leapmotion.*;
 import development.*;
 import controlP5.*;
+import java.awt.Robot;
+
 
 ControlP5 gui;
 LeapMotion leap;
@@ -10,6 +12,7 @@ OscP5 osc;
 NetAddress myAddress;
 Cursor leftCursor;
 Cursor riteCursor;
+Robot rbt;
 
 String myIp = NetInfo.lan();
 
@@ -23,6 +26,12 @@ PVector riteHandDyn = new PVector(0, 0, 0);
 void setup() {
   size (800, 400, P3D);
   background (255);
+
+  try {
+    rbt = new Robot();
+  } catch(Exception e) {
+    e.printStackTrace();
+  }
 
   gui = new ControlP5(this);
   leap = new LeapMotion (this);
@@ -141,5 +150,11 @@ void oscEvent(OscMessage dataIn) {
       riteHandDyn.y = dataIn.get(4).floatValue();
       riteHandDyn.z = dataIn.get(5).floatValue();
     }
+  }
+}
+
+void keyPressed() {
+  if (key == ' ') {
+    rbt.mouseMove (width/2, height/2);
   }
 }
