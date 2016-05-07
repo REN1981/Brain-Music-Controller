@@ -1,7 +1,6 @@
 import oscP5.*;
 import netP5.*;
 import de.voidplus.leapmotion.*;
-import development.*;
 import controlP5.*;
 
 ControlP5 gui;
@@ -10,6 +9,7 @@ OscP5 osc;
 NetAddress myAddress;
 Cursor leftCursor;
 Cursor riteCursor;
+Cursor mouseCursor;
 
 String myIp = NetInfo.lan();
 
@@ -28,6 +28,8 @@ void setup() {
   leap = new LeapMotion (this);
   leftCursor = new Cursor (leftHandPos, leftHandDyn);
   riteCursor = new Cursor (riteHandPos, riteHandDyn);
+  mouseCursor = new Cursor (new PVector(mouseX, mouseY, 0), riteHandDyn);
+
 
   guiSetup();
   oscSetup();
@@ -40,9 +42,11 @@ void draw () {
 
   leftCursor.setState(leftHandPos, leftHandDyn);
   riteCursor.setState(riteHandPos, riteHandDyn);
+  mouseCursor.setState(new PVector(mouseX, mouseY, 0), riteHandDyn);
 
   leftCursor.animate();
   riteCursor.animate();
+  mouseCursor.animate();
 
   oscRoutine();
 }

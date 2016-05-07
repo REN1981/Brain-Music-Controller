@@ -12,7 +12,7 @@ void setup ()
 
 void draw()
 {
-  background(0);
+  background(100);
   pointer.animate();
   
 }
