@@ -1,3 +1,8 @@
+//===========================================================================
+// Reverb -> [reverbSend] -> {time, density, preDelay}
+// Delay -> [delaySend] -> {time, feedback}
+// Distrosion -> [amount] -> {lowCut}
+//===========================================================================
 import netP5.*;
 import oscP5.*;
 import controlP5.*;
@@ -6,30 +11,25 @@ ControlP5 gui;
 OscP5 osc;
 NetAddress max;
 
-boolean isUpZoneTagOpen = true;
-boolean isDownZoneTagOpen = false;
-boolean isLeftZoneTagOpen = false;
-boolean isRightZoneTagOpen = false;
+//===========================================================================
 
-/////////////////////////////////
-Button upZone;
-Button downZone;
-Button leftZone;
-Button rightZone;
+Knob[] zoneKnob = new Knob[4];
 
-/////////////////////////////////
-Button upZoneTag;
-Button downZoneTag;
-Button leftZoneTag;
-Button rightZoneTag;
+//===========================================================================
 
-/////////////////////////////////
+Group[] zoneGroup = new Group[4];
+ScrollableList[] zoneList = new ScrollableList[4];
+ControllerList[] zoneParams = new ControllerList[4];
+
+
+//===========================================================================
+
 Slider volSlider;
 Toggle muteToggle;
 Toggle transPlay;
 Button transStop;
 
-ControllerList paramList;
+ControllerList linkedParamList;
 
 void setup() {
   size (640, 480);
@@ -38,7 +38,10 @@ void setup() {
   osc = new OscP5(this, 12001);
   max = new NetAddress("127.0.0.1", 12000);
 
-  paramList = new ControllerList();
+  linkedParamList = new ControllerList();
+  for (int i = 0; i < 4; i++) {
+    zoneParams[i] = new ControllerList();
+  }
   initializeGui();
 }
 
@@ -48,46 +51,48 @@ void draw() {
   stroke(255);
   line(0, 0, width, height);
   line(width, 0, 0, height);
-  
-  float x = upZoneTag.x(upZoneTag.getPosition());
-  x += ((isUpZoneTagOpen==true ? 0:-200) - x) * 0.2;;
-  float y = upZoneTag.y(upZoneTag.getPosition());
-  upZoneTag.setPosition(x,y);
 }
 
 void controlEvent(ControlEvent newEvent) {
-  OscMessage msg = new OscMessage("/" + newEvent.getController().getName());
-  msg.add(newEvent.getController().getValue());
-  osc.send(msg, max);
-  println("Controller used: " + newEvent.getController().getName());
-}
 
-void oscEvent(OscMessage msg) {
-  for (int i = 0; i < paramList.size(); i++)
-  {
-    if (msg.checkAddrPattern("/" + paramList.get(i).getName())) {
-      if (msg.checkTypetag("f")) {
-        gui.getController(paramList.get(i).getName()).changeValue(msg.get(0).floatValue());
+  if (newEvent.isController()) {
+    println("Controller used: " + newEvent.getController().getName());
+    for (int i = 0; i < linkedParamList.size(); i++) {
+      if (newEvent.getController().getName().equals(linkedParamList.get(i).getName())) {
+        //send OSC Messages;
+        OscMessage msg = new OscMessage("/" + newEvent.getController().getName());
+        msg.add(newEvent.getController().getValue());
+        osc.send(msg, max);
       }
-      if (msg.checkTypetag("i")) {
-        gui.getController(paramList.get(i).getName()).changeValue(msg.get(0).intValue());
+    }
+    for (int i = 0; i < 4; i++)
+    {
+      if (newEvent.isFrom(zoneList[i])) {
+        zoneListChange(i, (int)newEvent.getValue()); 
+        //newEvent.getController().bringToFront(); /// ???? makes array out of Bounds
       }
+    }
+  } else if (newEvent.isGroup()) {
+    println("Group used: " + newEvent.getGroup().getName());
+    if (newEvent.getGroup().isOpen())
+    {
+      zoneKnob[newEvent.getGroup().getId()].hide();
+    } else {
+      zoneKnob[newEvent.getGroup().getId()].show();
     }
   }
 }
 
-void upZoneTag () {
-  isUpZoneTagOpen = !isUpZoneTagOpen;
-}
-
-void downZoneTag () {
-  isDownZoneTagOpen = !isDownZoneTagOpen;
-}
-
-void leftZoneTag () {
-  isLeftZoneTagOpen = !isLeftZoneTagOpen;
-}
-
-void rightZoneTag () {
-  isRightZoneTagOpen = !isRightZoneTagOpen;
+void oscEvent(OscMessage msg) {
+  for (int i = 0; i < linkedParamList.size(); i++)
+  {
+    if (msg.checkAddrPattern("/" + linkedParamList.get(i).getName())) {
+      if (msg.checkTypetag("f")) {
+        gui.getController(linkedParamList.get(i).getName()).changeValue(msg.get(0).floatValue());
+      }
+      if (msg.checkTypetag("i")) {
+        gui.getController(linkedParamList.get(i).getName()).changeValue(msg.get(0).intValue());
+      }
+    }
+  }
 }

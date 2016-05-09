@@ -44,3 +44,17 @@ class triButton implements ControllerView<Button> {
     theApplet.popMatrix();
   }
 }
+
+
+//===========================================================================
+
+
+class KnobWithClick extends Controller<KnobWithClick> {
+  KnobWithClick(ControlP5 cp5, String theName) {
+    super (cp5, theName);
+  }
+  
+  void onClick() {
+    Pointer p1 = getPointer();
+  }
+}
