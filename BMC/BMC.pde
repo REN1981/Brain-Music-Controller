@@ -35,7 +35,7 @@ void setup() {
   size (640, 480);
   noStroke();
   gui = new ControlP5(this);
-  osc = new OscP5(this, 12001);
+  osc = new OscP5(this, 7400);
   max = new NetAddress("127.0.0.1", 12000);
 
   linkedParamList = new ControllerList();

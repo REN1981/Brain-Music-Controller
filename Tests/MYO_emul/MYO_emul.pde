@@ -57,13 +57,13 @@ float neutral,
   drop, 
   left, 
   right, 
-  rotate_left, 
-  rotate_right, 
-  rotate_clockwise, 
-  rotate_counterclockwise, 
-  rotate_foreward, 
-  rotate_reverse, 
-  disapear;
+  rotateLeft, 
+  rotateRight, 
+  rotateClockwise, 
+  rotateCounterClockwise, 
+  rotateForward, 
+  rotateReverse, 
+  disappear;
 
 void setup() {
   size (640, 480, P3D);
@@ -80,35 +80,149 @@ void initGui() {
   gui.addToggle("controlType")
     .setSize(20, 20)
     .setPosition(width - 30, height - 30);
+
+  gui.addToggle("Position")
+    .setSize(20, 20)
+    .setPosition(20, 20);
+
+  gui.addToggle("Rotation")
+    .setSize(20, 20)
+    .setPosition(20, 60);
+
+  gui.addToggle("Disappear")
+    .setSize(20, 20)
+    .setPosition(20, 100);
+
+  gui.addToggle("OSC")
+    .setSize(20, 20)
+    .setPosition(20, 140);
 }
 
 void draw() {
-  background(0);
-  leapAnalisis ();
+  background(200);
+  if (useLeap) {
+    leapAnalisis ();
+  }
+  
+  pushMatrix();
+  translate(width/2, height/2);
+  translate(push+pull, left+right, lift+drop);
+  rotateX(rotateClockwise + rotateCounterClockwise);
+  rotateY(rotateForward + rotateReverse);
+  rotateZ(rotateLeft+rotateRight);
+  noFill();
+  stroke(disappear);
+  box(10, 20, 30);
+  popMatrix();
+  
+  text("Push: " + str(push) + 
+      "\nPull: " + str(pull) + 
+      "\nLeft: " + str(left) + 
+      "\nRight: " + str(right) + 
+      "\nLift: " + str(lift) + 
+      "\nDrop: " + str(drop) + 
+      "\nRotateLeft: " + str(rotateLeft) + 
+      "\nRotateRight: " + str(rotateRight) + 
+      "\nRotateClocwise: " + str(rotateClockwise) + 
+      "\nRotateCounterClockwise: " + str(rotateCounterClockwise) + 
+      "\nRotateForward: " + str(rotateForward) + 
+      "\nRotateReverse: " + str(rotateReverse) +
+      "\nDisappear: " + str(disappear), 40, height/2);
+  
+  if (1 == gui.getController("OSC").getValue()) {
+      oscRoutine();    
+  }
 }
 
 
 void leapAnalisis () {
   for (Hand hand : leap.getHands()) {
-    
-    
     push = (hand.getPosition().y >= 0 ? hand.getPosition().y : 0);
     pull = (hand.getPosition().y <= 0 ? hand.getPosition().y : 0);
     lift = (hand.getPosition().z >= 0 ? hand.getPosition().z : 0);
     drop = (hand.getPosition().z <= 0 ? hand.getPosition().z : 0);
     right = (hand.getPosition().x >= 0 ? hand.getPosition().x : 0);
     left = (hand.getPosition().x <= 0 ? hand.getPosition().x : 0);
-    rotate_left = (hand.getYaw() <= 0 ? hand.getYaw() : 0);  
-    rotate_right = (hand.getYaw() >= 0 ? hand.getYaw() : 0);
-    rotate_clockwise = (hand.getRoll() >= 0 ? hand.getRoll() : 0);
-    rotate_counterclockwise = (hand.getRoll() <= 0 ? hand.getRoll() : 0);
-    rotate_foreward = (hand.getPitch() <= 0 ? hand.getPitch() : 0);
-    rotate_reverse = (hand.getPitch() <= 0 ? hand.getPitch() : 0); 
-    disapear = hand.getGrabStrength();
-
-
+    rotateLeft = (hand.getYaw() <= 0 ? hand.getYaw() * PI /180 : 0);  
+    rotateRight = (hand.getYaw() >= 0 ? hand.getYaw() * PI /180 : 0);
+    rotateClockwise = (hand.getRoll() >= 0 ? hand.getRoll() * PI /180 : 0);
+    rotateCounterClockwise = (hand.getRoll() <= 0 ? hand.getRoll() * PI /180 : 0);
+    rotateForward = (hand.getPitch() <= 0 ? hand.getPitch() * PI /180 : 0);
+    rotateReverse = (hand.getPitch() <= 0 ? hand.getPitch() * PI /180 : 0); 
+    disappear = hand.getGrabStrength();
     hand.draw();
   }
+}
+
+void oscRoutine() {
+
+  OscBundle bndle = new OscBundle();
+
+  //========================================================
+
+  OscMessage neutralMsg = new OscMessage("/COG/NEUTRAL");
+  neutralMsg.add(neutral);
+
+  //========================================================
+  if (1 == gui.getController("Position").getValue()) {
+    OscMessage pushMsg = new OscMessage("/COG/PUSH");
+    pushMsg.add(push);
+    bndle.add(pushMsg);
+
+    OscMessage pullMsg = new OscMessage("/COG/PULL");
+    pullMsg.add(pull);
+    bndle.add(pullMsg);
+
+    OscMessage liftMsg = new OscMessage("/COG/LIFT");
+    liftMsg.add(lift);
+    bndle.add(liftMsg);
+
+    OscMessage dropMsg = new OscMessage("/COG/DROP");
+    dropMsg.add(drop);
+    bndle.add(dropMsg);
+
+    OscMessage leftMsg = new OscMessage("/COG/LEFT");
+    leftMsg.add(left);
+    bndle.add(leftMsg);
+
+    OscMessage rightMsg = new OscMessage("/COG/RIGHT");
+    rightMsg.add(right);
+    bndle.add(rightMsg);
+  }
+  //========================================================
+
+  if (1 == gui.getController("Rotation").getValue()) {
+    OscMessage rotateLeftMsg = new OscMessage("/COG/ROTATE_LEFT");
+    rotateLeftMsg.add(rotateLeft);
+    bndle.add(rotateLeftMsg);
+
+    OscMessage rotateRightMsg = new OscMessage("/COG/ROTATE_RIGHT");
+    rotateRightMsg.add(rotateRight);
+    bndle.add(rotateRightMsg);
+
+    OscMessage rotateClockwiseMsg = new OscMessage("/COG/ROTATE_CLOCKWISE");
+    rotateClockwiseMsg.add(rotateClockwise);
+    bndle.add(rotateClockwiseMsg);
+
+    OscMessage rotateCounterClockwiseMsg = new OscMessage("/COG/ROTATE_COUNTERCLOCKWISE");
+    rotateCounterClockwiseMsg.add(rotateCounterClockwise);
+    bndle.add(rotateCounterClockwiseMsg);
+
+    OscMessage rotateForwardMsg = new OscMessage("/COG/ROTATE_FORWARD");
+    rotateForwardMsg.add(rotateForward);
+    bndle.add(rotateForwardMsg);
+
+    OscMessage rotateReverseMsg = new OscMessage("/COG/ROTATE_REVERSE");
+    rotateReverseMsg.add(rotateReverse);
+    bndle.add(rotateReverseMsg);
+  }
+  //========================================================
+  if (1 == gui.getController("Disappear").getValue()) {
+    OscMessage disappearMsg = new OscMessage("/COG/DISAPPEAR");
+    disappearMsg.add(disappear);
+    bndle.add(disappearMsg);
+  }
+  osc.send(bndle, txDir);
 }
 
 void controlType (boolean value) {
