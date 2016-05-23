@@ -49,8 +49,8 @@ void draw() {
   background(0);
   text(str(mouseX) + ", " + str(mouseY), width/4, height - 20);
   stroke(255);
-  line(0, 0, width, height);
-  line(width, 0, 0, height);
+  //line(0, 0, width, height);
+  //line(width, 0, 0, height);
 }
 
 void controlEvent(ControlEvent newEvent) {
