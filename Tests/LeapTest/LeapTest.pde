@@ -11,11 +11,8 @@ OscP5 osc;
 NetAddress myAddress;
 Cursor leftCursor;
 Cursor riteCursor;
-<<<<<<< HEAD
 Cursor mouseCursor;
-=======
 Robot rbt;
->>>>>>> origin/master
 
 String myIp = NetInfo.lan();
 
