@@ -1,18 +1,33 @@
 void initGui() {
+  /*
+  Acá se definen los sliders y toggles
+  sus posiciones, rangos y tamaños
+  */
+  
   vol = gui.addSlider("volume")
   .setSize(10, 150)
   .setPosition(width - 40, height - 190)
   .setRange(-60,6)
+  .setColorValue(color(255));
   //.setLabelVisible(false)
   ;
   
   mute = gui.addToggle("mute")
   .setSize(10, 10)
   .setPosition(width - 40, height - 25);
+  oscFlag = true;
 }
 
 
 void initElements () {
+  /*
+  Acá se inicializan los vértices a 0 así como las
+  posiciones de control. 
+  Además se definen los valores de elmPos y elmAng
+  para cada uno de los elementos para que configuren
+  los símbolos de cada elemento.
+  */
+  
   for (int i = 0; i < curPos.length; i++) {
     curPos[i] = new PVector(0, 0);
     newPos[i] = new PVector(0, 0);
@@ -76,17 +91,9 @@ void initElements () {
   elmAng[1][3] = new PVector(-86, 77);
   elmAng[1][4] = new PVector(66, -27);
   elmAng[1][5] = new PVector(82, -5);
-}
-
-
-float coefCalc (float x, boolean polarity) {
-  float y = 0;
-  if (!polarity) {
-    y = 1 - 8 * x / 3.0f;
-    if (y < 0) y = 0;
-  } else {
-    y = 8 * x /3.0f - 5/3.0f;
-    if (y < 0) y = 0;
-  }
-  return y;
+  
+  elmCol[0] = color(7, 54, 134);
+  elmCol[1] = color(129, 45, 9);
+  elmCol[2] = color(255, 114, 0);
+  elmCol[3] = color(21, 209, 227);
 }
