@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 219.0, 56.0, 1027.0, 706.0 ],
+		"rect" : [ -1246.0, 17.0, 1212.0, 630.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,259 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-63",
+					"linecount" : 7,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 18.0, 616.0, 150.0, 100.0 ],
+					"style" : "",
+					"text" : "Cada uno de los elementos tiene una subPatch idéntico en donde se procesa la infromación. Los comentarios sólo estarán en WATER"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-60",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 684.0, 845.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "DAC General"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-58",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 407.0, 783.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Control del Mute"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-56",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 664.0, 718.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Volumen general"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-54",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 722.0, 646.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Control del Volumen"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-52",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 673.0, 601.5, 150.0, 33.0 ],
+					"style" : "",
+					"text" : "Sub Patch de la reverberación como tal"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 673.0, 458.0, 150.0, 33.0 ],
+					"style" : "",
+					"text" : "Nivel General de la reverberación"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-43",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 349.75, 418.0, 86.0, 33.0 ],
+					"presentation_rect" : [ 349.75, 417.0, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "Visualización de Datos"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-41",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 343.75, 176.0, 86.0, 33.0 ],
+					"style" : "",
+					"text" : "Visualización de Datos"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-37",
+					"linecount" : 11,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 610.5, 295.0, 150.0, 154.0 ],
+					"style" : "",
+					"text" : "Este es un BPatcher. es un sub Patch que permite visualizar lo que ocurre dentro de el desde el patch general. Se puede acceder a él dando open en la pestaña izquierda.\nAcá se realiza una matriz de paneo para manipular la mezcla entre los elementos"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-28",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 598.0, 151.0, 150.0, 33.0 ],
+					"style" : "",
+					"text" : "En p Cursor se hace el manejo del cursor"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 619.5, 22.0, 150.0, 33.0 ],
+					"style" : "",
+					"text" : "Acá se reciben los mensajes de PUSH"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 129.0, 46.0, 272.0, 33.0 ],
+					"style" : "",
+					"text" : "la función Route enruta la información depenediendo del primer parámetro de una lista "
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 129.0, 11.0, 272.0, 33.0 ],
+					"style" : "",
+					"text" : "Se reciben los mensajes OSC de Mind Your OSC a través del puerto 7400"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 7,
+							"minor" : 2,
+							"revision" : 3,
+							"architecture" : "x86",
+							"modernui" : 1
+						}
+,
+						"rect" : [ -879.0, 168.0, 633.0, 227.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"linecount" : 15,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 11.0, 621.0, 208.0 ],
+									"style" : "",
+									"text" : "Este patch es el centro de procesamiento de audio del sistema BMC. El mismo se divide en 3 partes:\n\n1) El sistema de conexión con Mind Your OSC el cual se encargará de analizar la información proveniente de la suite afectiva y parametrizar los controles que modificarán el audio directamente.\n\n2) El manejo del cursor y la aleatoriedad de su posición, la cual se puede modificar de 3 formas diferentes: \n  a) A través de la suite cognitiva con el pensamiento PUSH,\n  b) A través de presionar la J mientras Max esté como ventana principal\n  c) A través de presionar la J mientras Processing esté como ventana principa (en este caso, Processing envía un mensaje por OSC a Max para indicar la acción.\n\n3) Finalmente, la última parte del sistema se encarga de las comunicaciones por OSC con Processing para enviar información relevante a la posicion y recibir información relevante el volumen de reproducción y el inicio de la reproducción\n "
+								}
+
+							}
+ ],
+						"lines" : [  ]
+					}
+,
+					"patching_rect" : [ 811.0, 11.0, 76.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"style" : "",
+						"tags" : ""
+					}
+,
+					"style" : "",
+					"text" : "p comments"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"format" : 6,
 					"id" : "obj-75",
 					"maxclass" : "flonum",
@@ -45,7 +298,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 423.5, 111.0, 50.0, 22.0 ],
+					"patching_rect" : [ 483.5, 106.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -57,7 +310,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 423.5, 59.0, 108.0, 22.0 ],
+					"patching_rect" : [ 483.5, 54.0, 108.0, 22.0 ],
 					"style" : "",
 					"text" : "OSC-route /PUSH"
 				}
@@ -116,7 +369,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 643.0, 125.0, 125.0, 259.0 ],
+						"rect" : [ -762.0, 252.0, 125.0, 259.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -694,7 +947,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 423.5, 240.0, 125.0, 259.0 ],
+					"patching_rect" : [ 483.5, 235.0, 125.0, 259.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -716,7 +969,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 438.0, 118.0, 687.0, 496.0 ],
+						"rect" : [ -1103.0, 55.0, 687.0, 496.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -744,6 +997,96 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-57",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 52.0, 400.0, 150.0, 20.0 ],
+									"style" : "",
+									"text" : "sub Patch del ecualizador"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-55",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 411.0, 464.0, 160.0, 60.0 ],
+									"style" : "",
+									"text" : "Transformaciones de los parámetros para manipular la frecuencia del filtro y el Q del filtro"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-53",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 391.5, 218.0, 150.0, 47.0 ],
+									"style" : "",
+									"text" : "Matriz de distribución entre los cuatro sonidos de la izquierda"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-51",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 70.0, 491.0, 150.0, 33.0 ],
+									"style" : "",
+									"text" : "Control del nivel general de reproducción"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-49",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 41.5, 60.0, 150.0, 33.0 ],
+									"style" : "",
+									"text" : "Este LoadBang debe iniciar la reproducción"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-38",
+									"linecount" : 8,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 168.0, 102.0, 122.0, 114.0 ],
+									"style" : "",
+									"text" : "Acá se pueden cargar los sonidos. Basta con arrastrarlos sobre cada uno de los playlist a la izquierda. Cuidar de arrastrarlos al centro"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-31",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 531.0, 109.0, 150.0, 33.0 ],
+									"style" : "",
+									"text" : "Visualización de la parametrización actual"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-28",
 									"maxclass" : "message",
@@ -946,21 +1289,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -1074,7 +1417,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 405.0, 108.0, 100.0, 100.0 ],
+									"patching_rect" : [ 427.0, 109.0, 100.0, 100.0 ],
 									"rightvalue" : 100,
 									"style" : "",
 									"topvalue" : 100
@@ -1202,7 +1545,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 595.0, 186.0, 640.0, 480.0 ],
+										"rect" : [ -993.0, 57.0, 640.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1611,7 +1954,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 286.0, 217.0, 76.0, 22.0 ],
+									"patching_rect" : [ 308.0, 218.0, 76.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -1633,7 +1976,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 278.0, 108.0, 100.0, 100.0 ],
+									"patching_rect" : [ 300.0, 109.0, 100.0, 100.0 ],
 									"rightvalue" : 200,
 									"style" : "",
 									"topvalue" : 200
@@ -1657,7 +2000,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 59.0, 410.0, 1007.0, 620.0 ],
+										"rect" : [ -1160.0, 48.0, 1007.0, 620.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1685,6 +2028,19 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"boxes" : [ 											{
+												"box" : 												{
+													"id" : "obj-4",
+													"linecount" : 10,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 504.0, 187.0, 160.0, 141.0 ],
+													"style" : "",
+													"text" : "Filtros de dos polos y dos zeros que responden a la parametrización generada por la gráfica de la izquierda. La misma convierte una respuesta en frecuencia deseada para el filtro en un conjunto de coeficientes para calcular el filtro biquad."
+												}
+
+											}
+, 											{
 												"box" : 												{
 													"id" : "obj-18",
 													"maxclass" : "newobj",
@@ -2074,21 +2430,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -2113,21 +2469,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -2152,21 +2508,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -4074,21 +4430,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -4113,21 +4469,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -4152,21 +4508,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -4191,21 +4547,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -5024,21 +5380,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -6152,21 +6508,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -6191,21 +6547,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -6230,21 +6586,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -7001,7 +7357,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 423.5, 27.0, 102.0, 22.0 ],
+					"patching_rect" : [ 483.5, 22.0, 102.0, 22.0 ],
 					"style" : "",
 					"text" : "OSC-route /COG"
 				}
@@ -7024,7 +7380,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 475.0, 517.0, 572.0, 699.0 ],
+						"rect" : [ 213.0, 142.0, 657.0, 626.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -7053,12 +7409,207 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-61",
+									"linecount" : 5,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 475.0, 528.0, 155.0, 74.0 ],
+									"style" : "",
+									"text" : "Control sobre la generación de nuevas posiciones para evitar que se generen si el DSP no está activo"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-59",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 440.0, 500.0, 57.0, 22.0 ],
+									"style" : "",
+									"text" : "route set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-58",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 440.0, 526.0, 24.0, 24.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-51",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "int" ],
+									"patching_rect" : [ 440.0, 476.0, 93.0, 22.0 ],
+									"style" : "",
+									"text" : "adstatus switch"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-40",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 127.0, 568.0, 54.0, 22.0 ],
+									"style" : "",
+									"text" : "gate 1 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-39",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 11.0, 568.0, 54.0, 22.0 ],
+									"style" : "",
+									"text" : "gate 1 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-34",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 204.0, 612.0, 31.0, 22.0 ],
+									"style" : "",
+									"text" : "350"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-27",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 269.0, 585.0, 150.0, 47.0 ],
+									"style" : "",
+									"text" : "Generación de la nueva posición desde la inicialización del software"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-57",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 204.0, 585.0, 60.0, 22.0 ],
+									"style" : "",
+									"text" : "loadbang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-32",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 202.5, 505.0, 150.0, 47.0 ],
+									"style" : "",
+									"text" : "Interpolaciones lineales que solo afectarán la generación sonora"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-29",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 202.5, 413.0, 150.0, 60.0 ],
+									"style" : "",
+									"text" : "Se restringe la posición para evitar que el cursor salga de la pantalla o llegue al limite"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-24",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 482.0, 279.0, 150.0, 47.0 ],
+									"style" : "",
+									"text" : "Generación de la siguiente posición desde MAX al oprimir J"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-20",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 54.0, 56.0, 150.0, 33.0 ],
+									"style" : "",
+									"text" : "Generación a través de la suite cognitiva"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 300.0, 52.0, 150.0, 33.0 ],
+									"style" : "",
+									"text" : "Generación manual de una nueva posición"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 235.0, 239.0, 150.0, 47.0 ],
+									"style" : "",
+									"text" : "Generación de la siguiente posición desde Processing"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-19",
 									"maxclass" : "button",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 447.0, 393.0, 24.0, 24.0 ],
+									"patching_rect" : [ 440.0, 302.0, 24.0, 24.0 ],
 									"style" : ""
 								}
 
@@ -7070,7 +7621,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 449.0, 335.0, 36.0, 22.0 ],
+									"patching_rect" : [ 440.0, 271.0, 36.0, 22.0 ],
 									"style" : "",
 									"text" : "sel 1"
 								}
@@ -7083,7 +7634,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 440.0, 283.0, 48.0, 22.0 ],
+									"patching_rect" : [ 440.0, 244.0, 48.0, 22.0 ],
 									"style" : "",
 									"text" : "== 106"
 								}
@@ -7096,7 +7647,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "int", "int", "int" ],
-									"patching_rect" : [ 451.0, 217.0, 50.5, 22.0 ],
+									"patching_rect" : [ 440.0, 217.0, 50.5, 22.0 ],
 									"style" : "",
 									"text" : "key"
 								}
@@ -7161,22 +7712,9 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 254.0, 269.0, 61.0, 22.0 ],
+									"patching_rect" : [ 235.0, 291.5, 61.0, 22.0 ],
 									"style" : "",
 									"text" : "r nextPos"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-57",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 269.0, 332.0, 60.0, 22.0 ],
-									"style" : "",
-									"text" : "loadbang"
 								}
 
 							}
@@ -7277,7 +7815,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 127.0, 587.0, 30.0, 30.0 ],
+									"patching_rect" : [ 127.0, 624.0, 30.0, 30.0 ],
 									"style" : ""
 								}
 
@@ -7289,7 +7827,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 11.0, 587.0, 30.0, 30.0 ],
+									"patching_rect" : [ 11.0, 624.0, 30.0, 30.0 ],
 									"style" : ""
 								}
 
@@ -7598,6 +8136,24 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-55", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-34", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-56", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-34", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-30", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -7611,6 +8167,24 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-38", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-55", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-39", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-56", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-40", 0 ]
 								}
 
 							}
@@ -7715,6 +8289,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-59", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-51", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-10", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -7751,7 +8334,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-54", 0 ],
+									"destination" : [ "obj-34", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-57", 0 ]
@@ -7760,7 +8343,34 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-55", 0 ],
+									"destination" : [ "obj-39", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-58", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-40", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-58", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-58", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-59", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-39", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-6", 0 ]
@@ -7769,7 +8379,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-56", 0 ],
+									"destination" : [ "obj-40", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-7", 0 ]
@@ -7797,7 +8407,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 423.5, 156.0, 54.0, 22.0 ],
+					"patching_rect" : [ 483.5, 151.0, 54.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -7829,7 +8439,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 59.0, 81.0, 640.0, 480.0 ],
+						"rect" : [ -1035.0, 102.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -8090,7 +8700,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 614.0, 639.0, 35.0, 22.0 ],
+					"patching_rect" : [ 673.0, 644.0, 35.0, 22.0 ],
 					"style" : "",
 					"text" : "r Vol"
 				}
@@ -9433,21 +10043,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -9472,21 +10082,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -9511,21 +10121,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -9550,21 +10160,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
 													"pitchcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"timestretch" : [ 0 ],
-													"mode" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"pitchshift" : [ 1.0 ],
+													"quality" : [ "basic" ],
 													"originallength" : [ 0.0, "ticks" ],
+													"originaltempo" : [ 120.0 ],
+													"slurtime" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ]
+													"mode" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"speed" : [ 1.0 ]
 												}
 
 											}
@@ -10284,7 +10894,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 813.0, 138.0, 535.0, 480.0 ],
+						"rect" : [ -1013.0, 88.0, 502.0, 519.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -10313,11 +10923,89 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-29",
+									"linecount" : 5,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 169.0, 402.0, 150.0, 74.0 ],
+									"style" : "",
+									"text" : "Envío a Processing a través del puerto 12001. La dirección IP 127.0.0.1 representa el ismo computador"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-23",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 172.0, 236.0, 150.0, 47.0 ],
+									"style" : "",
+									"text" : "Visualización de la nueva posición para ser enviada a Processing"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 172.0, 131.0, 150.0, 47.0 ],
+									"style" : "",
+									"text" : "Envío del mensaje para generar una nueva posición"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-18",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 87.0, 124.0, 65.0, 33.0 ],
+									"presentation_rect" : [ 89.0, 123.0, 0.0, 0.0 ],
+									"style" : "",
+									"text" : "Envío del Mute"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-15",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 5.0, 101.0, 60.0, 33.0 ],
+									"style" : "",
+									"text" : "Envío del volumen"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-13",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 128.0, 5.0, 279.0, 20.0 ],
+									"style" : "",
+									"text" : "Puerto para recibir información desde Processing"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-17",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 238.0, 236.0, 63.0, 22.0 ],
+									"patching_rect" : [ 169.0, 96.0, 63.0, 22.0 ],
 									"style" : "",
 									"text" : "s nextPos"
 								}
@@ -10330,7 +11018,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 208.0, 114.0, 24.0, 24.0 ],
+									"patching_rect" : [ 169.0, 64.0, 24.0, 24.0 ],
 									"style" : ""
 								}
 
@@ -10342,7 +11030,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 88.0, 66.0, 35.0, 22.0 ],
+									"patching_rect" : [ 87.0, 64.0, 35.0, 22.0 ],
 									"style" : "",
 									"text" : "== 0"
 								}
@@ -10354,7 +11042,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 88.0, 96.0, 47.0, 22.0 ],
+									"patching_rect" : [ 87.0, 96.0, 47.0, 22.0 ],
 									"style" : "",
 									"text" : "s Mute"
 								}
@@ -10366,33 +11054,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 5.0, 71.0, 37.0, 22.0 ],
+									"patching_rect" : [ 5.0, 64.0, 37.0, 22.0 ],
 									"style" : "",
 									"text" : "s Vol"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-26",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 179.0, 351.0, 49.0, 22.0 ],
-									"style" : "",
-									"text" : "s pos.y"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-25",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 351.0, 49.0, 22.0 ],
-									"style" : "",
-									"text" : "s pos.x"
 								}
 
 							}
@@ -11276,47 +11940,23 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-16::obj-51" : [ "pictctrl[2]", "pictctrl[1]", 0 ],
-			"obj-18::obj-51" : [ "pictctrl[8]", "pictctrl[1]", 0 ],
 			"obj-62" : [ "slider", "slider", 0 ],
+			"obj-18::obj-51" : [ "pictctrl[8]", "pictctrl[1]", 0 ],
 			"obj-16::obj-9" : [ "live.slider[3]", "live.slider", 0 ],
-			"obj-9::obj-51" : [ "pictctrl[6]", "pictctrl[1]", 0 ],
-			"obj-18::obj-16" : [ "pictctrl[9]", "pictctrl[1]", 0 ],
-			"obj-9::obj-16" : [ "pictctrl[4]", "pictctrl[1]", 0 ],
-			"obj-9::obj-9" : [ "live.slider[1]", "live.slider", 0 ],
+			"obj-18::obj-9" : [ "live.slider[4]", "live.slider", 0 ],
+			"obj-3" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-12::obj-51" : [ "pictctrl[1]", "pictctrl[1]", 0 ],
 			"obj-12::obj-16" : [ "pictctrl[7]", "pictctrl[1]", 0 ],
 			"obj-16::obj-16" : [ "pictctrl[3]", "pictctrl[1]", 0 ],
-			"obj-18::obj-9" : [ "live.slider[4]", "live.slider", 0 ],
+			"obj-18::obj-16" : [ "pictctrl[9]", "pictctrl[1]", 0 ],
+			"obj-16::obj-51" : [ "pictctrl[2]", "pictctrl[1]", 0 ],
 			"obj-12::obj-9" : [ "live.slider[2]", "live.slider", 0 ],
-			"obj-3" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-12::obj-51" : [ "pictctrl[1]", "pictctrl[1]", 0 ]
+			"obj-9::obj-51" : [ "pictctrl[6]", "pictctrl[1]", 0 ],
+			"obj-9::obj-16" : [ "pictctrl[4]", "pictctrl[1]", 0 ],
+			"obj-9::obj-9" : [ "live.slider[1]", "live.slider", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "Wind1.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Wind2.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Wind3.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Wind4.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "yafr2.maxpat",
 				"bootpath" : "/Users/Shared/Max 7/Examples/effects/reverb/lib",
 				"type" : "JSON",
@@ -11332,78 +11972,6 @@
 				"name" : "data-handler.maxpat",
 				"bootpath" : "C74:/packages/vizzie/patchers",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Earth1.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Earth2.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Earth4.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Earth3.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Fire1.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Fire2.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Fire3.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Fire4.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Water2.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Water3.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Water4.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Water1.wav",
-				"bootpath" : "~/Music/PT/BMC/Bounced Files",
-				"type" : "WAVE",
 				"implicit" : 1
 			}
 , 			{
